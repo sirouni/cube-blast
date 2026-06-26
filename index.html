@@ -1,134 +1,19 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Trilayer — 3D Block Puzzle</title>
-<meta name="description" content="Trilayer reimagines the classic block puzzle in three dimensions. Clear rows, columns, and entire planes across 3 layers.">
-<meta property="og:title" content="Trilayer — 3D Block Puzzle">
-<meta property="og:description" content="Classic block-clearing, now in 3D. Two modes, no ads, pure puzzle.">
-<meta property="og:image" content="https://sirouni.github.io/cube-blast/og.png">
-<meta property="og:url" content="https://sirouni.github.io/cube-blast/">
-<style>
-*{margin:0;padding:0;box-sizing:border-box}
-html{scroll-behavior:smooth}
-body{font-family:-apple-system,BlinkMacSystemFont,"SF Pro Display","Segoe UI",Roboto,sans-serif;color:#1d1d1f;overflow-x:hidden}
-
-/* Hero */
-.hero{min-height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:60px 24px 40px;background:linear-gradient(180deg,#e8edf4 0%,#f0e4ec 50%,#f5f5f7 100%)}
-.app-icon{width:120px;height:120px;border-radius:26px;box-shadow:0 8px 30px rgba(0,0,0,0.12);margin-bottom:24px}
-.hero h1{font-size:3em;font-weight:800;letter-spacing:-0.02em;margin-bottom:8px}
-.hero h1 span{background:linear-gradient(135deg,#c06070,#6080c0);-webkit-background-clip:text;-webkit-text-fill-color:transparent}
-.hero p.tagline{font-size:1.3em;color:#86868b;margin-bottom:36px;max-width:500px}
-.badge{height:54px;transition:transform 0.2s}
-.badge:hover{transform:scale(1.05)}
-
-/* Screenshots */
-.screenshots{padding:60px 24px;background:#f5f5f7;overflow:hidden}
-.screenshots h2{text-align:center;font-size:2em;font-weight:700;margin-bottom:36px}
-.scroll-row{display:flex;gap:20px;overflow-x:auto;padding:0 24px 24px;scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch;scrollbar-width:none}
-.scroll-row::-webkit-scrollbar{display:none}
-.scroll-row img{height:520px;border-radius:16px;box-shadow:0 4px 20px rgba(0,0,0,0.1);scroll-snap-align:center;flex-shrink:0}
-
-/* Features */
-.features{padding:80px 24px;max-width:900px;margin:0 auto}
-.features h2{text-align:center;font-size:2em;font-weight:700;margin-bottom:48px}
-.feature-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:32px}
-.feature{text-align:center;padding:24px}
-.feature .icon{font-size:2.5em;margin-bottom:12px}
-.feature h3{font-size:1.2em;font-weight:600;margin-bottom:8px}
-.feature p{color:#6e6e73;line-height:1.5}
-
-/* CTA */
-.cta{padding:60px 24px;text-align:center;background:linear-gradient(180deg,#f5f5f7 0%,#e8edf4 100%)}
-.cta h2{font-size:2em;font-weight:700;margin-bottom:24px}
-
-/* Footer */
-footer{padding:32px 24px;text-align:center;color:#86868b;font-size:0.85em;background:#e8edf4}
-footer a{color:#6e6e73;margin:0 12px}
-
-@media(max-width:600px){
-  .hero h1{font-size:2.2em}
-  .hero p.tagline{font-size:1.1em}
-  .scroll-row img{height:400px}
-  .feature-grid{grid-template-columns:1fr}
-}
-</style>
+<script>
+(function(){
+  var lang = (navigator.language || navigator.userLanguage || 'en').toLowerCase();
+  var base = location.pathname.replace(/\/index\.html$/, '/').replace(/\/$/, '') || '.';
+  if (lang.startsWith('zh')) { location.replace(base + '/zh/'); }
+  else if (lang.startsWith('ja')) { location.replace(base + '/ja/'); }
+  else { location.replace(base + '/en/'); }
+})();
+</script>
+<noscript><meta http-equiv="refresh" content="0;url=en/"></noscript>
 </head>
-<body>
-
-<section class="hero">
-  <img class="app-icon" src="icon.png" alt="Trilayer App Icon">
-  <h1><span>Trilayer</span></h1>
-  <p class="tagline">Classic block-clearing, reimagined in 3D. Stack across three layers, chain massive combos, and challenge your spatial thinking.</p>
-  <a href="https://apps.apple.com/app/id6781160708" target="_blank">
-    <img class="badge" src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg" alt="Download on the App Store">
-  </a>
-</section>
-
-<section class="screenshots">
-  <h2>See It in Action</h2>
-  <div class="scroll-row">
-    <img src="ss1.png" alt="3D block stacking">
-    <img src="ss2.png" alt="Drag and drop pieces">
-    <img src="ss3.png" alt="Clear lines and combos">
-    <img src="ss4.png" alt="Mind-bending 3D puzzles">
-    <img src="ss5.png" alt="Classic 8x8 mode">
-    <img src="ss6.png" alt="Level up progression">
-  </div>
-</section>
-
-<section class="features">
-  <h2>Why Trilayer?</h2>
-  <div class="feature-grid">
-    <div class="feature">
-      <div class="icon">🧊</div>
-      <h3>Think in 3D</h3>
-      <p>Blocks stack across 3 layers. Every move changes the board above and below.</p>
-    </div>
-    <div class="feature">
-      <div class="icon">💥</div>
-      <h3>Chain Combos</h3>
-      <p>Clear rows, columns, and entire planes. One move can trigger cascading clears.</p>
-    </div>
-    <div class="feature">
-      <div class="icon">🎮</div>
-      <h3>Two Modes</h3>
-      <p>Casual 5x5 for quick sessions. Classic 8x8 for deep strategy.</p>
-    </div>
-    <div class="feature">
-      <div class="icon">🔄</div>
-      <h3>Free Camera</h3>
-      <p>Rotate and tilt to see the board from any angle. Find the perfect spot.</p>
-    </div>
-    <div class="feature">
-      <div class="icon">📈</div>
-      <h3>Level Up</h3>
-      <p>New block shapes unlock as you progress. The challenge never stops.</p>
-    </div>
-    <div class="feature">
-      <div class="icon">🚫</div>
-      <h3>No Ads. Ever.</h3>
-      <p>No ads, no energy system, no paywalls. Just pure puzzle.</p>
-    </div>
-  </div>
-</section>
-
-<section class="cta">
-  <h2>Ready to Think in 3D?</h2>
-  <a href="https://apps.apple.com/app/id6781160708" target="_blank">
-    <img class="badge" src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg" alt="Download on the App Store">
-  </a>
-</section>
-
-<footer>
-  <p>&copy; 2025–2026 Trilayer</p>
-  <p>
-    <a href="support.html">Support</a>
-    <a href="privacy.html">Privacy</a>
-    <a href="https://github.com/sirouni/cube-blast/issues" target="_blank">Feedback</a>
-  </p>
-</footer>
-
-</body>
+<body></body>
 </html>

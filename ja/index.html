@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Trilayer — 3Dブロックパズル</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:-apple-system,BlinkMacSystemFont,"SF Pro Display","Segoe UI",Roboto,sans-serif;color:#1d1d1f;line-height:1.6}
+a{color:#0066cc;text-decoration:none}a:hover{text-decoration:underline}
+html{scroll-behavior:smooth}
+body{overflow-x:hidden}
+.hero{min-height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:60px 24px 40px;background:linear-gradient(180deg,#e8edf4 0%,#f0e4ec 50%,#f5f5f7 100%)}
+.app-icon{width:120px;height:120px;border-radius:26px;box-shadow:0 8px 30px rgba(0,0,0,0.12);margin-bottom:24px}
+.hero h1{font-size:3em;font-weight:800;letter-spacing:-0.02em;margin-bottom:8px}
+.hero h1 span{background:linear-gradient(135deg,#c06070,#6080c0);-webkit-background-clip:text;-webkit-text-fill-color:transparent}
+.hero p.tagline{font-size:1.2em;color:#86868b;margin-bottom:36px;max-width:520px}
+.badge{height:54px;transition:transform 0.2s}.badge:hover{transform:scale(1.05)}
+.screenshots{padding:60px 24px;background:#f5f5f7;overflow:hidden}
+.screenshots h2{text-align:center;font-size:2em;font-weight:700;margin-bottom:36px}
+.scroll-row{display:flex;gap:20px;overflow-x:auto;padding:0 24px 24px;scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch;scrollbar-width:none}
+.scroll-row::-webkit-scrollbar{display:none}
+.scroll-row img{height:520px;border-radius:16px;box-shadow:0 4px 20px rgba(0,0,0,0.1);scroll-snap-align:center;flex-shrink:0}
+.features{padding:80px 24px;max-width:900px;margin:0 auto}
+.features h2{text-align:center;font-size:2em;font-weight:700;margin-bottom:48px}
+.feature-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:32px}
+.feature{text-align:center;padding:24px}
+.feature .icon{font-size:2.5em;margin-bottom:12px}
+.feature h3{font-size:1.2em;font-weight:600;margin-bottom:8px}
+.feature p{color:#6e6e73;line-height:1.5}
+.cta{padding:60px 24px;text-align:center;background:linear-gradient(180deg,#f5f5f7 0%,#e8edf4 100%)}
+.cta h2{font-size:2em;font-weight:700;margin-bottom:24px}
+footer{padding:32px 24px;text-align:center;color:#86868b;font-size:0.85em;background:#e8edf4}
+footer a{color:#6e6e73;margin:0 12px}
+@media(max-width:600px){.hero h1{font-size:2.2em}.hero p.tagline{font-size:1.05em}.scroll-row img{height:400px}.feature-grid{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<div style="position:fixed;top:12px;right:16px;font-size:0.85em;z-index:99">
+<a href="../en/index.html">EN</a> · <a href="../zh/index.html">中文</a> · <a href="../ja/index.html">日本語</a>
+</div>
+<section class="hero">
+  <img class="app-icon" src="../icon.png" alt="Trilayer">
+  <h1><span>Trilayer</span></h1>
+  <p class="tagline">クラシックなブロックパズルが3次元に進化。3層の立体ボードで連鎖消去、空間思考に挑戦。</p>
+  <a href="https://apps.apple.com/app/id6781160708" target="_blank">
+    <img class="badge" src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg" alt="App Store">
+  </a>
+</section>
+<section class="screenshots">
+  <h2>ゲーム画面</h2>
+  <div class="scroll-row">
+    <img src="../ss1.png" alt="1"><img src="../ss2.png" alt="2"><img src="../ss3.png" alt="3">
+    <img src="../ss4.png" alt="4"><img src="../ss5.png" alt="5"><img src="../ss6.png" alt="6">
+  </div>
+</section>
+<section class="features">
+  <h2>Trilayer の特徴</h2>
+  <div class="feature-grid">
+    <div class="feature"><div class="icon">🧊</div><h3>3Dで考えよう</h3><p>ブロックは3層に積み重なり、一手ごとに上下の層が変化。</p></div>
+    <div class="feature"><div class="icon">💥</div><h3>連鎖コンボ</h3><p>行・列・レイヤーを消去。一手で連鎖消去を引き起こす。</p></div>
+    <div class="feature"><div class="icon">🎮</div><h3>2つのモード</h3><p>カジュアル5×5でサクッと、クラシック8×8で深い戦略。</p></div>
+    <div class="feature"><div class="icon">🔄</div><h3>自由カメラ</h3><p>回転・傾斜であらゆる角度からボードを確認。</p></div>
+    <div class="feature"><div class="icon">📈</div><h3>レベルアップ</h3><p>進むほど新しいブロック形状が解禁。挑戦は止まらない。</p></div>
+    <div class="feature"><div class="icon">🚫</div><h3>広告なし</h3><p>広告なし、スタミナなし、課金なし。純粋なパズル体験。</p></div>
+  </div>
+</section>
+<section class="cta">
+  <h2>3次元の挑戦、始めよう</h2>
+  <a href="https://apps.apple.com/app/id6781160708" target="_blank">
+    <img class="badge" src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg" alt="App Store">
+  </a>
+</section>
+<footer>
+  <p>&copy; 2025–2026 Trilayer</p>
+  <p><a href="support.html">サポート</a><a href="privacy.html">プライバシー</a><a href="https://github.com/sirouni/cube-blast/issues" target="_blank">フィードバック</a></p>
+</footer>
+</body></html>
